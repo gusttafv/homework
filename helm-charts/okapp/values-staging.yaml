@@ -1,0 +1,13 @@
+replicaCount: 2
+
+image:
+  tag: "v1.0"
+
+service:
+  type: NodePort
+  nodePort: 30083
+  targetPort: 8080
+
+ingress:
+  enabled: true
+  host: okapp-staging.local

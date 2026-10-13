@@ -1,0 +1,14 @@
+replicaCount: 3
+
+image:
+  tag: "v1.0"
+
+service:
+  enabled: false
+  type: Nodeport
+  nodePort: 30084
+  targetPort: 8080
+
+ingress:
+  enabled: true
+  host: okapp-prod.local

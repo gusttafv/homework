@@ -1,0 +1,21 @@
+# Секреты
+*.key
+*.crt
+*.pem
+.kube/
+.ssh/
+*.kubeconfig
+
+# Локальные файлы
+.DS_Store
+*.swp
+*~
+
+# Кэш
+.cache/
+.config/
+.local/
+
+# Временные файлы
+*.tmp
+*.log

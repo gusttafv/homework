@@ -1,0 +1,12 @@
+replicaCount: 1
+
+image:
+  tag: "v1.0"
+
+service:
+  type: ClusterIP
+  targetPort: 8080
+
+ingress:
+  enabled: true
+  host: okapp-dev.local

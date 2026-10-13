@@ -1,0 +1,44 @@
+replicaCount: 2
+
+image:
+  repository: gustafiko/okapp
+  pullPolicy: IfNotPresent
+  tag: "v1.0"
+
+env:
+  SAMPLE_VAR_1: 1
+  SAMPLE_VAR_2: 2
+  SAMPLE_VAR_3: 3
+
+deployment:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+
+service:
+  enabled: true
+  type: ClusterIP
+  port: 80
+  nodePort: null
+
+ingress:
+  enabled: false
+  className: "nginx"
+  host: okapp.local
+
+resources:
+  enabled: false
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 256Mi
+
+
+livenessProbe:
+   path: /health
+
+readinessProbe:
+   path: /health
