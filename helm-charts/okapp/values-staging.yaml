@@ -6,7 +6,7 @@ image:
 service:
   type: NodePort
   nodePort: 30083
-  targetPort: 8080
+  targetPort: 8000
 
 ingress:
   enabled: true
